@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+
+
+<!-- Content Goes Here -->
+        These movies are playing in theaters:
+        <div th:each="movies: ${movies}">
+            <img width="150px" th:src="@{'http://image.tmdb.org/t/p/original' + ${movies.posterPath}}"/>
+            <!--<span ???></span>-->
+            <span th:text="${movies.title}"></span>
+        </div>
+
+
+
+</body>
+</html>
